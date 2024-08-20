@@ -1,3 +1,21 @@
+:root {
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --text-dark: #333;
+    --body-bg-white: #fff;
+    --body-bg: #f8f9fa;
+    --body-bg-2: #D0D0D0;
+    --body-color: #212529;
+    --border-color: #dee2e6;
+    --border-radius: 0.25rem;
+    --border-radius-2: 0.75rem;
+    --transition: all 0.3s linear;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
