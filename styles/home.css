@@ -120,6 +120,10 @@ header {
     margin: .5rem 0 ;
 }
 
+.header2 a:hover {
+    opacity: 0.5;
+}
+
 /** Main */
 .container-section {
     max-width: 1100px;
