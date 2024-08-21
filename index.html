@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
-    <!-- Normalize-->
-    <link rel="stylesheet" href="styles/normalize.css">
-
     <!-- Icons-->
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
@@ -15,13 +12,15 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
 
+    <!-- Normalize-->
+    <link rel="stylesheet" href="styles/normalize.css">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
     <header>
-        <div class=".container-home">
+        <div class="container-home">
             <div class="header1">
                 <h1>
                     Pet
@@ -36,7 +35,7 @@
             </div>
             
             <div class="header2">
-                <div class="filters">
+                <div class="">
                     <button>Cães</button>
                     <button>Gatos</button>
                     <button>Pássaros</button>
@@ -51,74 +50,74 @@
     </header>
 
     <main>
-        <section>
+        <section class="container-section">
             <div>
                 <h1>Todos os posts</h1>
             </div>
 
             <!-- Inicio artigos -->
-            <div>
-                <article>
-                    <div>
-                        <img src="" alt="">
+            <div class="articles">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="assets/article01.png" alt="">
                         <p>Data Analytics</p>
                     </div>
 
                     <div>
-                        <h2>
+                        <h2 class="article-title">
                             7 Best Data Warahouse
                             Tools to Explore in 2024
                         </h2>
 
-                        <div>
+                        <div class="article-details">
                             <p>May 30, 2024</p>
-                            <p>9 minutes read</p>
+                            <p class="read">9 minutes read</p>
                         </div>
                     </div>
                 </article>
 
                 <!-- terceiro artigo  -->
-                <article>
-                    <div>
-                        <img src="" alt="">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="assets/article01.png" alt="">
                         <p>Data Analytics</p>
                     </div>
 
                     <div>
-                        <h2>
+                        <h2 class="article-title">
                             7 Best Data Warahouse
                             Tools to Explore in 2024
                         </h2>
 
-                        <div>
+                        <div class="article-details">
                             <p>May 30, 2024</p>
-                            <p>9 minutes read</p>
+                            <p class="read">9 minutes read</p>
                         </div>
                     </div>
                 </article>
 
                 <!-- segundo artigo  -->
-                <article>
-                    <div>
-                        <img src="" alt="">
-                        <p>Data Analytics</p>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="assets/article01.png" alt="">
+                        <p class="read">9 minutes read</p>
                     </div>
 
                     <div>
-                        <h2>
+                        <h2 class="article-title">
                             7 Best Data Warahouse
                             Tools to Explore in 2024
                         </h2>
 
-                        <div>
+                        <div class="article-details">
                             <p>May 30, 2024</p>
-                            <p>9 minutes read</p>
+                            <p class="read">9 minutes read</p>
                         </div>
                     </div>
                 </article>
             </div>  <!-- fim artigos -->
 
-            <div>
+            <div class="area-button-read-more">
                 <button>
                     Read more articles
                     <i class="fa-solid fa-arrow-right"></i>
@@ -126,25 +125,27 @@
             </div>
         </section>
         
-        <section>
-            <div>
-                <h2>
-                    Já conhece a Refugio Animal?
-                </h2>
-            </div>
-
-            <div>
-                <p>
-                    A Refugio Animal é uma ONG que cuida de animais abandonados e maltratados. 
-                    Eles precisam de ajuda para continuar com o trabalho. 
-                    Se você puder ajudar, doe ração, medicamentos ou dinheiro.
-                </p>
-
+        <section class="py-7">
+            <div class="container-section">
                 <div>
-                    <button>
-                       Visitar página
-                       <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <h2>
+                        Já conhece a Refugio Animal?
+                    </h2>
+                </div>
+    
+                <div>
+                    <p>
+                        A Refugio Animal é uma ONG que cuida de animais abandonados e maltratados. 
+                        Eles precisam de ajuda para continuar com o trabalho. 
+                        Se você puder ajudar, doe ração, medicamentos ou dinheiro.
+                    </p>
+    
+                    <div>
+                        <button>
+                           Visitar página
+                           <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
