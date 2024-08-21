@@ -151,7 +151,7 @@ header {
 }
 
 .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 16px;
 }
 
 .card-image {
@@ -216,6 +216,10 @@ header {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     margin: 0 auto;
+}
+
+.card-extended:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 16px;
 }
 
 .card-extended .card-image {
