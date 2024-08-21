@@ -35,8 +35,20 @@ header {
     width: 100vw;
 }
 
-.py-7 {
-    padding: 7rem 0;
+.pb-2 {
+    padding-bottom: 2rem;
+}
+
+.py-4 {
+    padding: 4rem 0;
+}
+
+.px-1 {
+    padding: 0 1rem;
+}
+
+.text-gray-light {
+    color: var(--secondary-color);
 }
 
 .container-home {
@@ -141,7 +153,6 @@ header {
 .card-image {
     height: 18rem;
     width: 100%;
-    position: relative;
     overflow: hidden;
 }
 
@@ -152,9 +163,8 @@ header {
 }
 
 .card:hover .card-image img {
-   opacity: 0.7;
+    opacity: 0.7;
 }
-
 
 .article-details {
     padding: 1rem 0.5rem;
@@ -186,3 +196,20 @@ header {
     font-weight: bold;
 }
 
+.area-button-read-more button:hover {
+    opacity: 0.5;
+}
+
+.card-extended {
+    background: var(--body-bg-white);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+    display: flex;
+    max-width: 40rem;
+    height: 26rem;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 0 auto;
+}
