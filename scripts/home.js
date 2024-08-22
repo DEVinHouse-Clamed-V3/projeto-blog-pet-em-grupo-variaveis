@@ -3,20 +3,36 @@ document.addEventListener('DOMContentLoaded', carregarPost);
 function localStoragePostsVazia() {
     console.log('Nenhum post encontrado.');
 
-    const articles = document.querySelector('#articles');
+    const articles = document.getElementById('articles');
 
     const emptyArticles = document.createElement('article');
+    emptyArticles.classList.add('card-empty');
 
+    const divEmptyText = document.createElement('div');
+    divEmptyText.classList.add('empty-text');
+
+    const p = document.createElement('p');
+    p.innerText = 'Nenhum post encontrado.';
+
+    divEmptyText.append(p);
+
+    emptyArticles.append(divEmptyText);
+
+    articles.append(emptyArticles);
 }
 
 function carregarPost() {
-    console.log('Carregando posts...');
 
-    const postsLocalStorage = JSON.parse(localStorage.getItem('posts')) || localStoragePostsVazia();
+    const postsLocalStorage = JSON.parse(localStorage.getItem('posts')) || [];
 
     const articles = document.querySelector('#articles');
 
     articles.innerHTML = '';
+
+    if (postsLocalStorage.length === 0) {
+        localStoragePostsVazia();
+        return;
+    }
 
     postsLocalStorage.forEach(post => {
         const article = document.createElement('article');
