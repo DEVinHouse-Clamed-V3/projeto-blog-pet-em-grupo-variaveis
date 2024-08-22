@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', carregarPost);
 
+function tempoLeitura(texto) {
+    const palavras = texto.split(' ');
+    const tempo = Math.ceil(palavras.length / 200);
+    return tempo;
+}
+
 function localStoragePostsVazia() {
     console.log('Nenhum post encontrado.');
 
@@ -66,9 +72,10 @@ function carregarPost() {
         const pArticleDetails = document.createElement('p');
         pArticleDetails.innerText = post.dataCriacao;
 
+        const leituraMinutos = tempoLeitura(post.descricao);
         const pArticleDetails2 = document.createElement('p');
         pArticleDetails2.classList.add('read');
-        pArticleDetails2.innerText = post.tempoLeitura;
+        pArticleDetails2.innerText = leituraMinutos;
 
         divArticleDetails.append(pArticleDetails, pArticleDetails2);
 
