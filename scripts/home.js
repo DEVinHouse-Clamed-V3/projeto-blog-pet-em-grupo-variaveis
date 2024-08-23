@@ -17,10 +17,10 @@ function localStoragePostsVazia() {
     const divEmptyText = document.createElement('div');
     divEmptyText.classList.add('empty-text');
 
-    const p = document.createElement('p');
-    p.innerText = 'Nenhum post encontrado.';
+    const h2 = document.createElement('h2');
+    h2.innerText = 'Nenhum post encontrado no momento...';
 
-    divEmptyText.append(p);
+    divEmptyText.append(h2);
 
     emptyArticles.append(divEmptyText);
 
@@ -28,10 +28,11 @@ function localStoragePostsVazia() {
 }
 
 function carregarPost() {
+    console.log('Carregando posts...');
 
     const postsLocalStorage = JSON.parse(localStorage.getItem('posts')) || [];
 
-    const articles = document.querySelector('#articles');
+    const articles = document.getElementById('articles');
 
     articles.innerHTML = '';
 
@@ -39,6 +40,8 @@ function carregarPost() {
         localStoragePostsVazia();
         return;
     }
+
+    console.log(postsLocalStorage);
 
     postsLocalStorage.forEach(post => {
         const article = document.createElement('article');
@@ -53,7 +56,7 @@ function carregarPost() {
 
         const p = document.createElement('p');
         p.classList.add('px-1', 'text-gray-light');
-        p.innerText = post.catgoria;
+        p.innerText = post.categoria;
 
         divCardImage.append(image, p);
 
@@ -75,12 +78,14 @@ function carregarPost() {
         const leituraMinutos = tempoLeitura(post.descricao);
         const pArticleDetails2 = document.createElement('p');
         pArticleDetails2.classList.add('read');
-        pArticleDetails2.innerText = leituraMinutos;
+        pArticleDetails2.innerText = `${leituraMinutos} min de leitura`;
 
         divArticleDetails.append(pArticleDetails, pArticleDetails2);
 
         divArticleTitle.append(h2, divArticleDetails);
 
         article.append(divArticleTitle);
+
+        articles.append(article);
     })
 }
