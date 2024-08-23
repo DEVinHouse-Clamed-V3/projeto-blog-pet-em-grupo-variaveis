@@ -89,3 +89,12 @@ function carregarPost() {
         articles.append(article);
     })
 }
+
+//**  Menu  */
+const menu = document.querySelector(".menu");
+const openMenuBtn = document.querySelector(".open-menu-btn");
+const filters = document.querySelector(".filters");
+
+openMenuBtn.addEventListener("click", () => {
+   filters.classList.toggle("open");
+})

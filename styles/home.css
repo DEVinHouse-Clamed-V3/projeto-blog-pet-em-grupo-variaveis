@@ -35,6 +35,10 @@ header {
     width: 100vw;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .pb-2 {
     padding-bottom: 2rem;
 }
@@ -123,6 +127,24 @@ header {
 .header2 a:hover {
     opacity: 0.5;
 }
+
+.header2-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-hamburger {
+    display: none;
+    transition: var(--transition)
+}
+
+.a-cadastrar-post-2 {
+    display: none;
+}
+
 
 /** Main */
 .container-section,
@@ -262,8 +284,47 @@ header {
     .empty-text {
         text-align: center;
     }
+
+    .filters {
+        display: none;
+    }
+
+    .a-cadastrar-post {
+        display: none;
+    }
+
+    .a-cadastrar-post-2 {
+        display: block;
+    }
+
+    .menu-hamburger {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
     
     .card-extended .card-image {
         height: auto;
     }
+
+    .menu {
+        position: fixed;
+        top: 150px;
+        left: -600px;
+        width: 320px;
+        height: 100vh;
+        background-color: var(--body-bg-2);
+        padding: 10px 30px 30px;
+        overflow-y: auto;
+        z-index: 1;
+        transform: translateX(60%);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .open {
+        left: -200px;
+    }
+
 }
