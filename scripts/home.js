@@ -41,8 +41,6 @@ function carregarPost() {
         return;
     }
 
-    console.log(postsLocalStorage);
-
     postsLocalStorage.forEach(post => {
         const article = document.createElement('article');
         article.classList.add('card');
@@ -90,11 +88,24 @@ function carregarPost() {
     })
 }
 
-//**  Menu  */
+//**  Menu hamburger */
 const menu = document.querySelector(".menu");
 const openMenuBtn = document.querySelector(".open-menu-btn");
 const filters = document.querySelector(".filters");
 
 openMenuBtn.addEventListener("click", () => {
    filters.classList.toggle("open");
+})
+
+//**  Double-click  */
+const articles = document.getElementById("articles");
+
+articles.addEventListener("dblclick", () => {
+    console.log("Clicou 2x");
+
+    const postsLocalStorage = JSON.parse(localStorage.getItem('posts')) || [];
+
+    postsLocalStorage.forEach(post => {
+        window.location.href = `post.html/id:${post.id}`;
+    })
 })
