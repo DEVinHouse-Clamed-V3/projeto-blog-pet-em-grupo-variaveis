@@ -157,6 +157,13 @@ header {
     padding: 0 3%;
 }
 
+.container-section h2 {
+    color: var(--text-dark);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
 .articles {
     display: flex;
     flex-wrap: wrap;

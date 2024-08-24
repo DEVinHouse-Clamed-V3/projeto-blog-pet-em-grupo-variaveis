@@ -44,6 +44,7 @@ function carregarPost() {
     postsLocalStorage.forEach(post => {
         const article = document.createElement('article');
         article.classList.add('card');
+        article.setAttribute('data-id', post.id);
 
         const divCardImage = document.createElement('div');
         divCardImage.classList.add('card-image');
@@ -85,6 +86,10 @@ function carregarPost() {
         article.append(divArticleTitle);
 
         articles.append(article);
+
+        article.addEventListener("dblclick", () => {
+            visualizarPost(post.id);
+        })
     })
 }
 
@@ -97,15 +102,8 @@ openMenuBtn.addEventListener("click", () => {
    filters.classList.toggle("open");
 })
 
-//**  Double-click  */
-const articles = document.getElementById("articles");
-
-articles.addEventListener("dblclick", () => {
-    console.log("Clicou 2x");
-
-    const postsLocalStorage = JSON.parse(localStorage.getItem('posts')) || [];
-
-    postsLocalStorage.forEach(post => {
-        window.location.href = `post.html/id:${post.id}`;
-    })
-})
+// Redirecionamento para a página de post
+function visualizarPost (id) {
+    console.log("Visualizando post", id);
+    window.location.href = `post.html?id=${id}`;
+}
