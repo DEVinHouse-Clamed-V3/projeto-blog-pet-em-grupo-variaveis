@@ -54,31 +54,36 @@
     </header>
 
     <main>
-        <div class="container-post">
+
+        <div id="error" class="container-post" style="display: none;">
+
+            <h3>Que pena ! Esse pet ja foi adotado :)</h3>
+
+        </div>
+
+        <div id="posts" class="container-post">
 
             <div class="dentro-card">
-                <h2 id="nome" class="text-center">Amora</h2>
+                <h2 id="nome" class="text-center"></h2>
             </div>
 
             <div class="dentro-cardimg">
-                <img id="foto" src="data:image/webp;base64,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"
+                <img id="foto" 
                  class="imagem" style="object-fit: cover;" >
                 
             </div>
 
             <div class="dentro-cardcate">
                 <h4>Categoria:</h4>
-                <p id="categoria">Cachorro</p>
+                <p id="categoria"></p>
             </div>
 
             <div  class="dentro-carddescri">
                 <h4>Descrição:</h4>
-                <p id="descricao">Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Placeat autem sequi culpa
-                     non itaque quo ratione, deleniti rerum 
-                     ipsum fugit odit corrupti voluptates 
-                     conse
-                </p>
+               <div class="descripiton">
+                <p class="descripiton" id="descricao"></p>
+               </div>
+                
             </div>
 
             <div class="dentro-carddata">
